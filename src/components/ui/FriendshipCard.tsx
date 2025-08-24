@@ -13,7 +13,7 @@ export default function FriendshipCard({
 }) {
   return (
     <motion.li
-      className="border border-[#EDEDED] rounded-2xl p-6 pt-0 mb-6 space-y-3 lg:pb-10 lg:border-0"
+      className="border border-[#EDEDED] rounded-2xl p-6 pt-0 mb-6 space-y-3 last:mb-0 lg:pb-10 lg:last:pb-0 lg:border-0"
       animate={{ opacity: active ? 1 : 0.4 }}
       transition={{ duration: 0.3 }}
     >

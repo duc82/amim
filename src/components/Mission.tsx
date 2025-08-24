@@ -63,7 +63,7 @@ export default function Mission() {
     }
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); // chạy 1 lần khi load
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -111,14 +111,9 @@ export default function Mission() {
         Mang lại cuộc sống tốt đẹp hơn cho những người đồng hành
       </motion.h2>
       <div className="lg:flex lg:items-start space-y-6 lg:space-y-0 relative lg:px-16">
-        <div className="relative px-2.5 lg:flex-[41%] lg:max-w-[41%] order-2 lg:sticky lg:top-[150px] lg:px-0 z-10">
-          <img
-            src="/mission-image.png"
-            alt="Mission"
-            className="rounded-2xl w-full"
-          />
+        <div className="relative w-[700px] h-[400px] px-2.5 lg:flex-[41%] lg:max-w-[41%] order-2 lg:sticky lg:top-[150px] lg:px-0 z-10">
           <div
-            className="bg-cover bg-no-repeat bg-center transition-all duration-300 ease-ease rounded-2xl opacity-0"
+            className="bg-cover bg-no-repeat bg-center transition-all duration-300 ease-ease rounded-2xl opacity-0 invisible"
             style={{
               backgroundImage: `url(${missions[activeIndex].image})`,
               width: "100%",
@@ -127,6 +122,7 @@ export default function Mission() {
               top: 0,
               left: 0,
               opacity: 1,
+              visibility: "visible",
             }}
           ></div>
         </div>
@@ -136,7 +132,7 @@ export default function Mission() {
             {String(activeIndex + 1).padStart(2, "0")}/
             {String(missions.length).padStart(2, "0")}
           </div>
-          <ul ref={containerRef} className="px-2.5 lg:px-0 lg:pl-36">
+          <ul ref={containerRef} className="px-2.5 lg:px-0 lg:pl-36 lg:-mt-6">
             {missions.map((mission, i) => {
               return (
                 <FriendshipCard

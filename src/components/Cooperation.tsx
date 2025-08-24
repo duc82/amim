@@ -241,7 +241,7 @@ export default function Cooperation() {
           <div className="mb-[30px] lg:mb-9">
             <div className="flex gap-[51px] lg:gap-[73px] overflow-hidden">
               <motion.div
-                animate={{ x: ["0%", "-110%"] }}
+                animate={{ x: ["0%", "-105%"] }}
                 transition={{
                   duration: 10,
                   ease: "linear",
@@ -258,7 +258,7 @@ export default function Cooperation() {
                 ))}
               </motion.div>
               <motion.div
-                animate={{ x: ["0%", "-110%"] }}
+                animate={{ x: ["0%", "-105%"] }}
                 transition={{
                   duration: 10,
                   ease: "linear",
