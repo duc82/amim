@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2f2e79;
+  --font-quicksand: "Quicksand", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --background-image-hero: url("/hero.png");
+  --background-image-hero-mobile: url("/hero-mobile.png");
+  --background-image-about: url("/about.png");
+  --background-image-about-mobile: url("/about-mobile.png");
+  --background-image-vision: url("/vision.png");
+  --background-image-corner: url("/corner.png");
+  --background-image-cooperation-background: url("/cooperation-background.png");
+  --background-image-cooperation-eclipse: url("/cooperation-eclipse.png");
+  --background-image-cooperation-vector: url("/cooperation-vector.png");
+  --background-image-cooperation-union: url("/cooperation-union.png");
+  --background-image-cooperation-union-mobile: url("/cooperation-union-mobile.png");
+  --background-image-job-opportunities: url("/job-opportunities.png");
+  --background-image-investment-2: linear-gradient(
+      to bottom,
+      #2f2e79,
+      rgba(166, 18, 32, 47%)
+    ),
+    url("/investment-2.png");
+  --ease-ease: ease;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("./assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("./assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("./assets/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf")
+    format("truetype");
+}
+
+@layer base {
+  html {
+    @apply leading-[1.2] font-quicksand;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+.cooperation-slide.swiper-slide-active {
+  @apply opacity-100;
+}
+
+.cooperation-slide {
+  @apply opacity-25 transition-opacity duration-300;
+}
