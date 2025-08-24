@@ -1,36 +1,23 @@
-import { motion, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 export default function FriendshipCard({
   mission,
-  index,
-  setActiveIndex,
+  active,
 }: {
   mission: {
-    image: string;
+    icon: string;
     title: string;
     content: string;
   };
-  index: number;
-  setActiveIndex: (index: number) => void;
+  active: boolean;
 }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-
-  useEffect(() => {
-    if (isInView) {
-      setActiveIndex(index);
-    }
-  }, [isInView, index, setActiveIndex]);
-
   return (
     <motion.li
-      ref={ref}
-      className="border border-[#EDEDED] rounded-2xl p-6 mb-6 space-y-3 lg:pb-10 lg:border-0"
-      animate={{ opacity: isInView ? 1 : 0.4 }}
+      className="border border-[#EDEDED] rounded-2xl p-6 pt-0 mb-6 space-y-3 lg:pb-10 lg:border-0"
+      animate={{ opacity: active ? 1 : 0.4 }}
       transition={{ duration: 0.3 }}
     >
-      <img src={mission.image} alt={mission.title} />
+      <img src={mission.icon} alt={mission.title} />
       <h3 className="uppercase text-[#165BB8] font-bold text-xl leading-[1.25] lg:text-[26px]">
         {mission.title}
       </h3>

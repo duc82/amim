@@ -6,19 +6,7 @@ const initialInvestments = [
   {
     iconActive: "/logo.png",
     icon: "/logo-2.png",
-    value: "Investment",
-    active: true,
-  },
-  {
-    iconActive: "/logo.png",
-    icon: "/logo-2.png",
-    value: "Wealth Management",
-    active: false,
-  },
-  {
-    iconActive: "/logo.png",
-    icon: "/logo-2.png",
-    value: "Training",
+    value: "Hospitality",
     active: false,
   },
   {
@@ -30,8 +18,20 @@ const initialInvestments = [
   {
     iconActive: "/logo.png",
     icon: "/logo-2.png",
-    value: "Hospitality",
+    value: "Training",
     active: false,
+  },
+  {
+    iconActive: "/logo.png",
+    icon: "/logo-2.png",
+    value: "Wealth Management",
+    active: false,
+  },
+  {
+    iconActive: "/logo.png",
+    icon: "/logo-2.png",
+    value: "Investment",
+    active: true,
   },
 ];
 
@@ -117,7 +117,7 @@ export default function Investment() {
                   });
                 }}
                 className={clsx(
-                  "absolute text-[7px] font-medium rounded-full tracking-tight size-28 flex justify-center items-center shadow-sm",
+                  "absolute text-[7px] font-medium rounded-full tracking-tight size-28 flex justify-center items-center shadow-md",
                   investment.active
                     ? "bg-linear-to-t from-[#3E4089] to-[#1F226E] text-white"
                     : "bg-white text-[#3E4089]"
@@ -142,7 +142,6 @@ export default function Investment() {
             );
           })}
           {/* <div className="absolute bg-linear-[40deg] from-[#328AE2] to-[#FF0D39] w-full h-full rounded-full p"></div> */}
-          .
         </div>
       </div>
 
